@@ -1,0 +1,9 @@
+# Ignore compiled Python files
+*.pyc
+**/_pycache_/
+**/build/
+**/dist/
+
+# random stuff
+pyinstaller_bundle.local.spec
+test.py
