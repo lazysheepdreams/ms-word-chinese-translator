@@ -1,5 +1,5 @@
 from tkinter import *
-from src.gui.translate_gui import TranslateGUI
+from gui.translate_gui import TranslateGUI
 
 if __name__ == "__main__":
     root = Tk()

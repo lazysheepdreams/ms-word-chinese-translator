@@ -1,8 +1,9 @@
 from tkinter import *
 from tkinter import filedialog
 from PIL import ImageTk, Image
-from src.core.translate_service import TranslateService
-from src.core.word_doc_service import WordDocService
+# from core.translate_service import TranslateService
+from core.python_docx_translate_service import TranslateService
+from core.word_doc_service import WordDocService
 import os
 
 class TranslateGUI:
@@ -62,7 +63,9 @@ class TranslateGUI:
         try:
             self.service.translate_docx(self.file_path.get(), 's2t')
             self.notification_message.set("转换完成")
-        except:
+        except Exception as e:
+            print(e)
+
             self.notification_message.set("转换失败, 请确保当前路径无同名文档")
 
     def t2s(self):
@@ -72,5 +75,6 @@ class TranslateGUI:
         try:
             self.service.translate_docx(self.file_path.get(), 't2s')
             self.notification_message.set("转换完成")
-        except:
+        except Exception as e:
+            print(e)
             self.notification_message.set("转换失败, 请确保当前路径无同名文档")
