@@ -2,20 +2,7 @@ import os
 import shutil
 import xml.etree.ElementTree as ET
 import json
-import sys
-
-# Steps
-# 1. rename file to zip
-# 2. extract zip to a folder
-# 3. translate each file
-#    - for each file in folder
-#    - translate file
-# 4. zip folder
-# 5. rename zip file to docx
-
 import zipfile
-# import openpyxl
-# import docx
 
 class TranslateService:
 
